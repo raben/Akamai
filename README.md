@@ -13,29 +13,29 @@ require 'Akamai.php';
 $service = new Akamai_Netstorage_Service({host});
 $service->authorize({key}, {key_name}, {version});
 /* mkdir */
-$service->mkdir('https://[example]-nsu.akamaihd.net/[dir_name]');
+$service->mkdir('[dir_name]');
 /* upload */
-$service->upload('https://[example]-nsu.akamaihd.net/[dir_name]/[file_name]', '[string]');
+$service->upload('[dir_name]/[file_name]', '[string]');
 /* symlink */
-$service->symlink('https://[example]-nsu.akamaihd.net/[dir_name]/[symlinkfile_name]', 'https://[example]-nsu.akamaihd.net/[dir_name]/[file_name]');
+$service->symlink('[dir_name]/[symlinkfile_name]', '[dir_name]/[file_name]');
 /* du */
-$service->du('https://[example]-nsu.akamaihd.net/[dir_name]');
+$service->du('[dir_name]');
 /* dir */
-$service->dir('https://[example]-nsu.akamaihd.net/[dir_name]');
+$service->dir('[dir_name]');
 /* mtime */
-$service->mtime('https://[example]-nsu.akamaihd.net/[dir_name]', strtotime('2013-01-01 00:00:00'));
+$service->mtime('[dir_name]', strtotime('2013-01-01 00:00:00'));
 /* rename */
-$service->rename('https://[example]-nsu.akamaihd.net/[dir_name]/[file_name]', 'https://[example]-nsu.akamaihd.net/[dir_name]/[renamefile_name]');
+$service->rename('[dir_name]/[file_name]', '[dir_name]/[renamefile_name]');
 /* upload */
-$service->upload('https://[example]-nsu.akamaihd.net/[dir_name]/[file_name]', '[string]');
+$service->upload('[dir_name]/[file_name]', '[string]');
 /* stat */
-$service->stat('https://[example]-nsu.akamaihd.net/[dir_name]/[file_name]');
+$service->stat('[dir_name]/[file_name]');
 /* delete */
-$service->delete('https://[example]-nsu.akamaihd.net/[dir_name]/[file_name]');
+$service->delete('[dir_name]/[file_name]');
 /* rmdir */
-$service->rmdir('https://[example]-nsu.akamaihd.net/[dir_name]');
+$service->rmdir('[dir_name]');
 /* quick-delete */
-$service->quick_delete('https://[example]-nsu.akamaihd.net/[dir_name]'); 
+$service->quick_delete('[dir_name]'); 
 /* get latest status */
 $service->getLastStatusCode();
 ```
