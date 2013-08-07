@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<package version="1.0">
+ <name>Akamai</name>
+ <summary>Akamai API</summary>
+ <description>Akamai NetStorage HTTP API for PHP.</description>
+ <license>MIT License</license>
+ <maintainers>
+  <maintainer>
+   <user>Arita Yuuki</user>
+   <name>rabe_ame</name>
+   <email>rabe.ame@gmail.com</email>
+   <role>lead</role>
+  </maintainer>
+ </maintainers>
+
+ <release>
+  <version>0.8.0</version>
+  <date>2013-08-07</date>
+  <state>beta</state>
+  <notes>
+   This is the first release.
+  </notes>
+  <deps>
+    <dep type="php" rel="ge" version="5.2.11" />
+  </deps>
+  <filelist>
+   <dir name="/" baseinstalldir="Akamai">
+     <file role="doc" name="LICENSE.txt" />
+     <file role="doc" name="README.md" />
+     <file role="php" name="Akamai.php" />
+     <dir name="netstorage">
+      <file role="php" name="Authorize.php" />
+      <file role="php" name="Service.php" />
+     </dir>
+     <dir name="tests">
+       <file role="test" name="Netstorage_Authorize_test.phpt" />
+       <file role="test" name="Netstorage_Authorize_test.phpt" />
+       <file role="test"  name="akamai.ini.sample" />
+     </dir>
+   </dir>
+  </filelist>
+ </release>
+</package>
+

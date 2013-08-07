@@ -1,0 +1,7 @@
+[akamai]
+host=samplestringns-nsu.akamaihd.net
+key=key_string
+key_name=name_string
+base_url=directory_path
+file_name=file_name
+version=5
