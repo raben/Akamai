@@ -14,8 +14,8 @@
  </maintainers>
 
  <release>
-  <version>0.8.0</version>
-  <date>2013-08-07</date>
+  <version>0.8.1</version>
+  <date>2013-09-09</date>
   <state>beta</state>
   <notes>
    This is the first release.
@@ -25,7 +25,7 @@
   </deps>
   <filelist>
    <dir name="/" baseinstalldir="Akamai">
-     <file role="doc" name="LICENSE.txt" />
+     <file role="doc" name="LICENSE" />
      <file role="doc" name="README.md" />
      <file role="php" name="Akamai.php" />
      <dir name="netstorage">

@@ -6,6 +6,19 @@ April 8, 2013
 
 ### PHP versions 5.2.11+
 
+### Build
+```
+$ pear pv
+$ pear package
+```
+
+### Install
+```
+$ pear info Akamai-{version}.tgz
+$ pear list Akamai-{version}.tgz
+$ pear install -f Akamai-{version}.tgz
+```
+
 ### Usage
 
 ```
