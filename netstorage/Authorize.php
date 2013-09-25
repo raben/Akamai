@@ -50,7 +50,7 @@ class Akamai_Netstorage_Authorize
 				  ($this->version == 4) ? "sha1" :
 				  ($this->version == 5) ? "sha256" :
 				  null;
-		if(!$algorithm) throw new Exception('it is not supported version ['.$this->version.']');
+		if($algorithm===null) throw new Exception('it is not supported version ['.$this->version.']');
 		return base64_encode(hash_hmac($algorithm, $sign_string, $this->key, true));
 	}
 }
