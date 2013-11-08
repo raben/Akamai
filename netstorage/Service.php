@@ -175,6 +175,7 @@ class Akamai_Netstorage_Service
 			if($length != 0){
 				$tmpfile = tmpfile();
 				fwrite($tmpfile, $body);
+        fflush($tmpfile);
 				fseek($tmpfile, 0);
 				curl_setopt($curl, CURLOPT_INFILE, $tmpfile);
 			}
