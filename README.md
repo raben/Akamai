@@ -1,5 +1,7 @@
 Akamai NetStorage HTTP API for PHP-PEAR.
 =========
+
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/raben/Akamai?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 It is implemented in accordance with the document the following specifications:
 https://control.akamai.com/dl/customers/NS/NetStrgHttpCM.pdf
 April 8, 2013
