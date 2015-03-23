@@ -169,14 +169,15 @@ class Akamai_Netstorage_Service
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $method);
 
+    $tmpfile = '';
 		if($method == 'PUT') {
 			$length = strlen($body);
 			if($length != 0){
 				$tmpfile = tmpfile();
 				fwrite($tmpfile, $body);
+        fflush($tmpfile);
 				fseek($tmpfile, 0);
 				curl_setopt($curl, CURLOPT_INFILE, $tmpfile);
-				fclose($tmpfile);
 			}
 			curl_setopt($curl, CURLOPT_UPLOAD, 1);
 			curl_setopt($curl, CURLOPT_INFILESIZE, strlen($body));
@@ -191,6 +192,11 @@ class Akamai_Netstorage_Service
 		$data = curl_exec($curl);
 		$this->_last_status_code = curl_getinfo($curl, CURLINFO_HTTP_CODE); 
 		curl_close($curl);
+
+    if($tmpfile) {
+		  fclose($tmpfile);
+    }
+
 		return $data;
 	}
 
