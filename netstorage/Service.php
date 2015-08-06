@@ -75,6 +75,7 @@ class Akamai_Netstorage_Service
 		$auth_sign	= $this->auth->getAuthSign($url, $action_string);
 		
 		$headers	= array(
+			"Host: " . $this->host,
 			"Accept:",
 			"Accept-Encoding: identity",
 			"X-Akamai-ACS-Auth-Data: {$auth_data}",
@@ -147,6 +148,7 @@ class Akamai_Netstorage_Service
 		$auth_sign	= $this->auth->getAuthSign($url, $action_string);
 		
 		$headers	= array(
+			"Host: " . $this->host,
 			"Accept:",
 			"Accept-Encoding: identity",
 			"X-Akamai-ACS-Auth-Data: {$auth_data}",
